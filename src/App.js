@@ -6,6 +6,7 @@ import { useNav } from './stores/user.store';
 import authService from './services/auth.service';
 import Login from "./pages/auth/Login";
 import Dashboard from "./pages/dashboard/Dashboard";
+import Pos from "./pages/pos/Pos";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
                  { authService.getCurrentUserType() === "ADMIN" && (
                     <Routes>
                       <Route exact path="/" element={<Dashboard />} />
+                      <Route exact path="/pos" element={<Pos />} />
 
                       <Route path="*" element={ <Navigate to="/" /> } />
                     </Routes>  

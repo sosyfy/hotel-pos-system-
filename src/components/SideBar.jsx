@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { MdOutlineDashboard } from "react-icons/md";
-import { RiSettings4Line } from "react-icons/ri";
+import { RiSettings4Line, RiMenuFill } from "react-icons/ri";
 import { AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
 import { FiMessageSquare, FiFolder, FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
@@ -11,7 +11,7 @@ const SideBar = () => {
 
   const menus = [
     { name: "dashboard", link: "/", icon: MdOutlineDashboard },
-    { name: "user", link: "/", icon: AiOutlineUser },
+    { name: "POS", link: "/pos", icon: FiShoppingCart },
     { name: "messages", link: "/", icon: FiMessageSquare },
     { name: "File Manager", link: "/", icon: FiFolder },
     { name: "Cart", link: "/", icon: FiShoppingCart },
@@ -28,11 +28,12 @@ const SideBar = () => {
         } duration-500 text-gray-100 px-4`}
       >
         <div className="py-3 flex justify-end">
-          <AiOutlineHeart
+          <RiMenuFill
             size={26}
             className="cursor-pointer hidden md:flex"
             onClick={() => setOpen(!open)}
           />
+        
         </div>
         <div className="mt-4 flex flex-col gap-4 relative">
           {menus?.map((menu, i) => {
