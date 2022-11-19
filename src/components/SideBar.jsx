@@ -24,7 +24,7 @@ const SideBar = () => {
     <aside className="h-screen min-h-screen fixed overflow-y-auto overflow-x-hidden sidebar">
       <div
         className={`bg-[#0e0e0e] min-h-screen ${
-          open ? "w-60 z-10" : "w-0 -translate-x-60 md:-translate-x-0 md:w-32"
+          open ? "w-60 z-10 md:z-0" : "w-0 -translate-x-60 md:-translate-x-0 md:w-28"
         } duration-500 text-gray-100 px-4`}
       >
         <div className="py-3 flex justify-end">
@@ -36,7 +36,7 @@ const SideBar = () => {
         </div>
         <div className="mt-4 flex flex-col gap-4 relative">
           {menus?.map((menu, i) => {
-            let size = open ? "28" : "40"
+            let size = open ? "28" : "34"
             return (
             <Link
               to={menu?.link}
@@ -59,7 +59,7 @@ const SideBar = () => {
               <h2
                 className={`${
                   open && "hidden"
-                } absolute left-48 bg-white font-semibold whitespace-pre text-gray-900 rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 group-hover:left-28 group-hover:duration-300 group-hover:w-fit `}
+                } absolute left-48 bg-white font-semibold whitespace-pre text-gray-900 rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 group-hover:left-24 z-50 group-hover:duration-300 group-hover:w-fit `}
               >
                 { menu?.name}
               </h2>
