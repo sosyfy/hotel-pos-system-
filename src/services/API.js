@@ -7,7 +7,6 @@ if ( authService.getCurrentUserAccessToken() ) {
   headers = {
     'Authorization': 'Bearer ' + authService.getCurrentUserAccessToken(),
     'Content-Type': 'application/json',
-    'App-Key': authService.getAppKey(),
   };
 
 } else {
@@ -21,4 +20,5 @@ export const axiosInstance = axios.create({
   timeout: 200000,
 });
 
-export const baseUrl = "any";
+
+export const baseUrl = "http://localhost:3000/";

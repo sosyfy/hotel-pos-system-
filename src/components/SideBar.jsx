@@ -8,6 +8,7 @@ import shallow from 'zustand/shallow'
 import { useNav } from "../stores/user.store";
 
 const SideBar = () => {
+
   const menus = [
     { name: "dashboard", link: "/", icon: MdOutlineDashboard },
     { name: "user", link: "/", icon: AiOutlineUser },
@@ -60,7 +61,7 @@ const SideBar = () => {
                   open && "hidden"
                 } absolute left-48 bg-white font-semibold whitespace-pre text-gray-900 rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 group-hover:left-28 group-hover:duration-300 group-hover:w-fit `}
               >
-                {menu?.name}
+                { menu?.name}
               </h2>
             </Link>
           )})}
