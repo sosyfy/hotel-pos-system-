@@ -21,7 +21,7 @@ const SideBar = () => {
   const [open, setOpen] = useNav((state)=>([ state.open , state.setOpen]), shallow );
 
   return (
-    <aside className="h-screen min-h-screen fixed">
+    <aside className="h-screen min-h-screen fixed overflow-y-auto overflow-x-hidden sidebar">
       <div
         className={`bg-[#0e0e0e] min-h-screen ${
           open ? "w-60 z-10" : "w-0 -translate-x-60 md:-translate-x-0 md:w-32"

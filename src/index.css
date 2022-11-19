@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.sidebar::-webkit-scrollbar {
+    width: 1px;
+}
+   
