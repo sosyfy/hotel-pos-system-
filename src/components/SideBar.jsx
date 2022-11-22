@@ -30,7 +30,7 @@ const SideBar = () => {
         <div className="py-3 flex justify-end">
           <RiMenuFill
             size={26}
-            className="cursor-pointer hidden md:flex"
+            className="cursor-pointer hiden md:flex"
             onClick={() => setOpen(!open)}
           />
         
