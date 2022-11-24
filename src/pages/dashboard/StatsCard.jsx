@@ -7,26 +7,30 @@ function StatsCard() {
         {
             title: "Total Revenue",
             percentage: "+32.40%",
-            value: "$10,243.00",
+            value: "10243.00",
             status: "up",
             icon: BsCoin,
         },
         {
             title: "Total Dish Ordered",
             percentage: "-12.40%",
-            value: "23,456",
+            value: "23456",
             status: "down",
             icon: BsBookmarkDash,
         },
         {
             title: "Total Customer",
             percentage: "+2.40%",
-            value: "1,234",
+            value: "1234",
             status: "up",
             icon: BsFillPeopleFill,
         },
     ];
 
+    let formatCurrency = new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "KES",
+      });
 
     return (
         <div className='flex gap-6 flex-col md:flex-row'>
@@ -49,7 +53,7 @@ function StatsCard() {
                     </div>
 
 
-                    <div className="text-3xl font-semibold text-black">{stat.value}</div>
+                    <div className="text-3xl font-semibold text-black">{ formatCurrency.format(stat.value)}</div>
                     <div className="text-sm tracking-wide font-medium text-gray-500">{stat.title}</div>
 
                 </div>
