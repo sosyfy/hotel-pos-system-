@@ -10,9 +10,9 @@ function Dashboard() {
       <div className="grid grid-cols-12 mt-4 px-2">
 
         <div className="col-span-12 md:col-span-4">
-          <div className="flex justify-around rounded-lg border py-4 px-3 bg-blue-300 items-center mr-3">
+          <div className="flex justify-around rounded-lg border py-4 px-3 bg-gradient-to-r from-cyan-400 to-blue-200 items-center mr-3">
             <div className="svg">
-            
+             
             </div>
             <div className="grid gap-1">
               <h2 className="font-bold text-lg">Ksh 44,323</h2>

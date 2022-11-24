@@ -29,7 +29,7 @@ function App() {
           <main className='w-Screen flex'>
               <SideBar />
               <section   className={`${ open ? "md:ml-60" : "md:ml-28" } w-full`}>
-                  {/* <Header /> */}
+                  <Header />
                  { authService.getCurrentUserType() === "ADMIN" && (
                     <Routes>
                       <Route exact path="/" element={<Dashboard />} />

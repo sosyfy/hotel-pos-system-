@@ -1,11 +1,12 @@
 import React from "react";
 import { MdOutlineDashboard } from "react-icons/md";
-import { RiSettings4Line, RiMenuFill } from "react-icons/ri";
-import { AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
+import { RiSettings4Line } from "react-icons/ri";
+import { AiOutlineHeart } from "react-icons/ai";
 import { FiMessageSquare, FiFolder, FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import shallow from 'zustand/shallow'
 import { useNav } from "../stores/user.store";
+import { BiGridAlt } from "react-icons/bi"
 
 const SideBar = () => {
 
@@ -24,11 +25,12 @@ const SideBar = () => {
     <aside className="h-screen min-h-screen fixed overflow-y-auto overflow-x-hidden sidebar">
       <div
         className={`bg-[#0e0e0e] min-h-screen ${
-          open ? "w-60 z-10 md:z-0" : "w-0 -translate-x-60 md:-translate-x-0 md:w-28"
+          open ? "w-60 z-50 md:z-0" : "w-0 -translate-x-60 md:-translate-x-0 md:w-28"
         } duration-500 text-gray-100 px-4`}
       >
         <div className="py-3 flex justify-end">
-          <RiMenuFill
+
+          <BiGridAlt
             size={26}
             className="cursor-pointer hiden md:flex"
             onClick={() => setOpen(!open)}

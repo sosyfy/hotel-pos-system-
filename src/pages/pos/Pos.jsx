@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import {MdRestaurantMenu} from 'react-icons/md'
 import {GiTakeMyMoney} from 'react-icons/gi'
-import {CiMoneyCheck1} from 'react-icons/ci'
+import {FaRegMoneyBillAlt} from 'react-icons/fa'
 import {TbTrash} from 'react-icons/tb'
 
 function Pos() {
@@ -178,7 +178,7 @@ function Pos() {
           style={{backgroundColor: paymentMode === "MPESA" && "red"}} 
           onClick={()=> setPaymentMode("MPESA")} 
           className={`px-1 lg:px-4 bg-white border py-2 rounded  w-full flex flex-col lg:flex-row justify-around items-center hover:bg-slate-50`}>
-            <CiMoneyCheck1 className='text-lg'  />
+            <FaRegMoneyBillAlt className='text-lg'  />
             <p className='text-gray-500 font-bold text-xs uppercase'>m-pesa</p>
           </button>
           <button 
