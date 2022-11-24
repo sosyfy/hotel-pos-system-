@@ -99,7 +99,42 @@ function Pos() {
             <h2 className='font-semibold text-base text-gray-800 leading-3 whitespace-nowrap ' >Choose Category </h2>
           </div>
           {/* categories  */}
-           <div className='flex pt-4 gap-3'>
+           <div className='flex pt-4 gap-3 overflow-auto pb-4'>
+            <button className="card rounded-lg p-3 px-4 bg-white">
+              <MdRestaurantMenu className='h-4 mx-auto'/>
+              <p className='text-gray-700 font-bold text-sm'>Breakfast</p>
+            </button>
+          
+            <button className="card rounded-lg p-3 px-4 bg-white">
+              <MdRestaurantMenu className='h-4 mx-auto'/>
+              <p className='text-gray-700 font-bold text-sm'>Breakfast</p>
+            </button>
+          
+            <button className="card rounded-lg p-3 px-4 bg-white">
+              <MdRestaurantMenu className='h-4 mx-auto'/>
+              <p className='text-gray-700 font-bold text-sm'>Breakfast</p>
+            </button>
+          
+            <button className="card rounded-lg p-3 px-4 bg-white">
+              <MdRestaurantMenu className='h-4 mx-auto'/>
+              <p className='text-gray-700 font-bold text-sm'>Breakfast</p>
+            </button>
+          
+            <button className="card rounded-lg p-3 px-4 bg-white">
+              <MdRestaurantMenu className='h-4 mx-auto'/>
+              <p className='text-gray-700 font-bold text-sm'>Breakfast</p>
+            </button>
+          
+            <button className="card rounded-lg p-3 px-4 bg-white">
+              <MdRestaurantMenu className='h-4 mx-auto'/>
+              <p className='text-gray-700 font-bold text-sm'>Breakfast</p>
+            </button>
+          
+            <button className="card rounded-lg p-3 px-4 bg-white">
+              <MdRestaurantMenu className='h-4 mx-auto'/>
+              <p className='text-gray-700 font-bold text-sm'>Breakfast</p>
+            </button>
+          
             <button className="card rounded-lg p-3 px-4 bg-white">
               <MdRestaurantMenu className='h-4 mx-auto'/>
               <p className='text-gray-700 font-bold text-sm'>Breakfast</p>

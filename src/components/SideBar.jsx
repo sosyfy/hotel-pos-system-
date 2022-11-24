@@ -2,18 +2,19 @@ import React from "react";
 import { MdOutlineDashboard } from "react-icons/md";
 import { RiSettings4Line } from "react-icons/ri";
 import { AiOutlineHeart } from "react-icons/ai";
-import { FiMessageSquare, FiFolder, FiShoppingCart } from "react-icons/fi";
+import { TbFileInvoice, TbLayoutDashboard } from "react-icons/tb";
+import { FiFolder, FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import shallow from 'zustand/shallow'
 import { useNav } from "../stores/user.store";
-import { BiGridAlt } from "react-icons/bi"
+import { CgMenuLeft, CgMenuRight } from "react-icons/cg"
 
 const SideBar = () => {
 
   const menus = [
-    { name: "dashboard", link: "/", icon: MdOutlineDashboard },
+    { name: "dashboard", link: "/", icon: TbLayoutDashboard },
     { name: "POS", link: "/pos", icon: FiShoppingCart },
-    { name: "messages", link: "/", icon: FiMessageSquare },
+    { name: "Invoices", link: "/invoices", icon: TbFileInvoice },
     { name: "File Manager", link: "/", icon: FiFolder },
     { name: "Cart", link: "/", icon: FiShoppingCart },
     { name: "Saved", link: "/", icon: AiOutlineHeart, margin: true },
@@ -29,12 +30,19 @@ const SideBar = () => {
         } duration-500 text-gray-100 px-4`}
       >
         <div className="py-3 flex justify-end">
-
-          <BiGridAlt
+         {open ? 
+          <CgMenuRight
             size={26}
             className="cursor-pointer hiden md:flex"
             onClick={() => setOpen(!open)}
           />
+          : (
+          <CgMenuLeft
+            size={26}
+            className="cursor-pointer hiden md:flex"
+            onClick={() => setOpen(!open)}
+          /> )
+          }
         
         </div>
         <div className="mt-4 flex flex-col gap-4 relative">

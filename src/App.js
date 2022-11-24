@@ -8,12 +8,12 @@ import Login from "./pages/auth/Login";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Pos from "./pages/pos/Pos";
 import Header from "./components/Header";
+import Invoices from "./pages/invoices/Invoices";
 
 
 function App() {
-   console.log(authService.getCurrentUserAccessToken());
 
-   const [ open , setOpen ] = useNav((state)=>([ state.open ,state.setOpen]), shallow );
+  const [ open , setOpen ] = useNav((state)=>([ state.open ,state.setOpen]), shallow );
   return (
 
       <BrowserRouter>
@@ -34,6 +34,7 @@ function App() {
                     <Routes>
                       <Route exact path="/" element={<Dashboard />} />
                       <Route exact path="/pos" element={<Pos />} />
+                      <Route exact path="/invoices" element={<Invoices />} />
 
                       <Route path="*" element={ <Navigate to="/" /> } />
                     </Routes>  
