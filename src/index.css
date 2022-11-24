@@ -1,6 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Gantari:wght@100;200;400;500;600&family=Poppins:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base {
+    html {
+        font-family: 'Gantari', sans-serif;
+        /* font-family: 'Poppins', sans-serif; */
+    }
+}
 
 
 .sidebar::-webkit-scrollbar {

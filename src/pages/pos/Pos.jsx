@@ -80,7 +80,11 @@ function Pos() {
  
   const clearAll = ()=> setCart([])
 
-  console.log(paymentMode);
+ const remove = ( id) => {
+   
+  let newCart = cart.filter((p)=> p.id !== id )
+  setCart(newCart)
+ }
 
   return (
     <section className='w-full p-4 bg-gray-200 h-screen'>
@@ -88,7 +92,7 @@ function Pos() {
 
       <div className="grid grid-cols-12 w-full h-full gap-2">
         {/* right side  */}
-        <div className="col-span-4 bg-slate-50/50 rounded min-h-max w-full pt-4 px-2">
+        <div className="col-span-7 bg-slate-50/50 rounded min-h-max w-full pt-4 px-2">
           {/* header  */}
           <div className="header flex items-baseline justify-between">
             <h2 className='font-semibold text-base text-gray-800 leading-3 whitespace-nowrap ' >Choose Category </h2>
@@ -131,7 +135,7 @@ function Pos() {
         {/*  
           //? CART  SECTION
         */}
-        <aside className="col-span-7 bg-white rounded-lg shadow-lg min-h-max px-3 py-4">
+        <aside className="col-span-5 bg-white rounded-lg shadow-lg min-h-max px-3 py-4">
         {/* cart items  */}
       
          <div className="flex justify-between items-center py-2">
@@ -155,7 +159,7 @@ function Pos() {
             <button onClick={ ()=> decrease(p.id)} className="rounded-full h-8 w-8 font-bold bg-transparent border-2 border-green-400"> - </button>
             <p className='font-bold'>{ p.quantity }</p>
             <button onClick={ ()=> increase(p.id)} className="rounded-full font-bold h-8 w-8 bg-transparent border-2 border-green-400"> + </button>
-            <TbTrash className='mr-2 text-xl'  />
+            <TbTrash className='mr-2 text-xl' onClick={ ()=>remove(p.id)} />
            </div>
           </div>
         ))}
@@ -170,11 +174,17 @@ function Pos() {
         {/* payment method */}
         <h5 className='font-medium pt-2'>Payment Method</h5>
         <div className="flex justify-center gap-4 pt-2">
-        <button style={{backgroundColor: paymentMode === "MPESA" && "red"}} onClick={()=> setPaymentMode("MPESA")} className={`px-1 lg:px-4 bg-white border py-2 rounded  w-full flex flex-col lg:flex-row justify-around items-center hover:bg-slate-50`}>
+        <button 
+          style={{backgroundColor: paymentMode === "MPESA" && "red"}} 
+          onClick={()=> setPaymentMode("MPESA")} 
+          className={`px-1 lg:px-4 bg-white border py-2 rounded  w-full flex flex-col lg:flex-row justify-around items-center hover:bg-slate-50`}>
             <CiMoneyCheck1 className='text-lg'  />
             <p className='text-gray-500 font-bold text-xs uppercase'>m-pesa</p>
           </button>
-          <button style={{backgroundColor: paymentMode === "CASH" && "red"}} onClick={()=> setPaymentMode("CASH")}  className={`px-1 lg:px-4 bg-white border py-2 rounded  w-full flex flex-col lg:flex-row justify-around items-center hover:bg-slate-50`}>
+          <button 
+           style={{backgroundColor: paymentMode === "CASH" && "red"}}
+           onClick={()=> setPaymentMode("CASH")}  
+           className={`px-1 lg:px-4 bg-white border py-2 rounded  w-full flex flex-col lg:flex-row justify-around items-center hover:bg-slate-50`}>
             <GiTakeMyMoney className='text-lg' />
             <p className='text-gray-500 font-bold text-xs uppercase '>Cash</p>
           </button>
