@@ -89,8 +89,7 @@ function Pos() {
 
   return (
     <section className='w-full p-4 bg-gray-200 h-screen overflow-hidden'>
-    
-
+  
       <div className="grid grid-cols-12 w-full h-full gap-2">
         {/* right side  */}
         <div className="col-span-6 bg-slate-50/50 rounded min-h-max w-full pt-4 px-2">
@@ -99,7 +98,7 @@ function Pos() {
             <h2 className='font-semibold text-base text-gray-800 leading-3 whitespace-nowrap ' >Choose Category </h2>
           </div>
           {/* categories  */}
-           <div className='flex pt-4 gap-3 overflow-auto pb-4'>
+           <div className='flex pt-5 gap-3 overflow-auto categories'>
             <button className="card rounded-lg p-3 px-4 bg-white">
               <MdRestaurantMenu className='h-4 mx-auto'/>
               <p className='text-gray-700 font-bold text-sm'>Breakfast</p>

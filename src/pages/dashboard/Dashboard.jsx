@@ -8,15 +8,15 @@ function Dashboard() {
 
   return (
     <div className="min-h-screen">
-      <main class="flex flex-col flex-1 gap-6 p-4">
-        <header>
-          <h1 class="text-3xl font-semibold leading-loose">Dashboard</h1>
-          <div class="text-gray-800">Tuesday 2 Feb, 2021</div>
+      <main className="flex flex-col flex-1 gap-4 p-4 pt-1 md:pt-4">
+        <header className='flex flex-col md:flex-row justify-between md:items-center items-start'>
+          <h1 className="text-3xl font-semibold leading-loose">Dashboard</h1>
+          <div className="text-gray-800 -mt-2 md:mt-0">Tuesday 2 Feb, 2021</div>
         </header>
-        <hr class="border-gray-700" />
+        <hr className="border-gray-400" />
         <StatsCard />
       </main>
-      <aside class="flex flex-col md:flex-row gap-y-6 gap-x-5 p-4">
+      <aside className="flex flex-col md:flex-row gap-y-6 gap-x-5 p-4 w-full">
         <MostOrdered />
         <MostTypeOfOrder />
       </aside>

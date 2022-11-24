@@ -13,9 +13,15 @@
     }
 }
 
+.categories {
+    scroll-snap-type: y mandatory;
+}
 
-.sidebar::-webkit-scrollbar {
+.categories  div {
+    scroll-snap-align: center;
+}
+
+::-webkit-scrollbar {
     width: 1px;
-   
 }
    
