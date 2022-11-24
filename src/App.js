@@ -7,6 +7,7 @@ import authService from './services/auth.service';
 import Login from "./pages/auth/Login";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Pos from "./pages/pos/Pos";
+import Header from "./components/Header";
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <main className='w-Screen flex'>
               <SideBar />
               <section   className={`${ open ? "md:ml-60" : "md:ml-28" } w-full`}>
+                  {/* <Header /> */}
                  { authService.getCurrentUserType() === "ADMIN" && (
                     <Routes>
                       <Route exact path="/" element={<Dashboard />} />

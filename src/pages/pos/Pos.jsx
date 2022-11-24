@@ -87,7 +87,7 @@ function Pos() {
  }
 
   return (
-    <section className='w-full p-4 bg-gray-200 h-screen'>
+    <section className='w-full p-4 bg-gray-200 h-screen overflow-hidden'>
     
 
       <div className="grid grid-cols-12 w-full h-full gap-2">
