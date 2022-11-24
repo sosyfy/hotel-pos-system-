@@ -3,6 +3,7 @@ import {MdRestaurantMenu} from 'react-icons/md'
 import {GiTakeMyMoney} from 'react-icons/gi'
 import {FaRegMoneyBillAlt} from 'react-icons/fa'
 import {TbTrash} from 'react-icons/tb'
+import {FiPlusCircle , FiMinusCircle} from 'react-icons/fi'
 
 function Pos() {
 
@@ -78,7 +79,7 @@ function Pos() {
   }
 
  
-  const clearAll = ()=> setCart([])
+  const clearAll = ()=>{setCart([]); setPaymentMode('')}
 
  const remove = ( id) => {
    
@@ -92,7 +93,7 @@ function Pos() {
 
       <div className="grid grid-cols-12 w-full h-full gap-2">
         {/* right side  */}
-        <div className="col-span-7 bg-slate-50/50 rounded min-h-max w-full pt-4 px-2">
+        <div className="col-span-6 bg-slate-50/50 rounded min-h-max w-full pt-4 px-2">
           {/* header  */}
           <div className="header flex items-baseline justify-between">
             <h2 className='font-semibold text-base text-gray-800 leading-3 whitespace-nowrap ' >Choose Category </h2>
@@ -115,7 +116,7 @@ function Pos() {
 
            {/* cards  */}
 
-           <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-4">
+           <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-4">
              { products?.map((product)=>(
                <div 
                className="col-span-1 lg:py-8 bg-white rounded-md shadow-sm px-2 py-3 group hover:shadow-lg hover:scale-[102%] transition duration-300 ease-linear"
@@ -135,7 +136,7 @@ function Pos() {
         {/*  
           //? CART  SECTION
         */}
-        <aside className="col-span-5 bg-white rounded-lg shadow-lg min-h-max px-3 py-4">
+        <aside className="col-span-6 bg-white rounded-lg shadow-lg min-h-max px-3 py-4">
         {/* cart items  */}
       
          <div className="flex justify-between items-center py-2">
@@ -145,21 +146,21 @@ function Pos() {
           
           <div>
           { cart?.map((p)=>(
-           <div className="product flex justify-between items-center bg-slate-200 px-1 rounded-xl my-2">
+           <div className="product flex flex-col md:flex-row justify-between items-center bg-slate-200 px-1 rounded-xl  gap-y-2 pb-3 my-2">
            <div className="flex py-2 px-1 items-center">
-             <div className='h-16 w-16'>
+             <div className='h-16 w-16 hidden lg:inline-block'>
              <img src="https://cdn.britannica.com/36/123536-050-95CB0C6E/Variety-fruits-vegetables.jpg" alt="img" className='w-full rounded h-full' />
              </div>
              <div className='ml-1 px-1'>
-               <p className='text-sm font-bold text-gray-500'>{p.name}</p>
-               <p className='font-semibold text-base'>Ksh {p.cost}</p>
+               <p className='text-xs md:text-sm font-bold text-gray-500 py-2'>{p.name}</p>
+               <p className='font-semibold text-sm  md:text-base'>Ksh {p.cost}</p>
              </div>
            </div>
-           <div className="flex items-center gap-2">
-            <button onClick={ ()=> decrease(p.id)} className="rounded-full h-8 w-8 font-bold bg-transparent border-2 border-green-400"> - </button>
+           <div className="flex items-center gap-3">
+            <button onClick={ ()=> decrease(p.id)} className=""> <FiMinusCircle className='text-xl md:text-2xl' /> </button>
             <p className='font-bold'>{ p.quantity }</p>
-            <button onClick={ ()=> increase(p.id)} className="rounded-full font-bold h-8 w-8 bg-transparent border-2 border-green-400"> + </button>
-            <TbTrash className='mr-2 text-xl' onClick={ ()=>remove(p.id)} />
+            <button onClick={ ()=> increase(p.id)} className=""> < FiPlusCircle className='text-xl md:text-2xl'/> </button>
+            <TbTrash className='mr-2 text-lg md:text-xl' onClick={ ()=>remove(p.id)} />
            </div>
           </div>
         ))}
