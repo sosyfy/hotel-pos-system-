@@ -52,6 +52,7 @@ const SideBar = () => {
             <Link
               to={menu?.link}
               key={i}
+              onClick={() => setOpen(!open)}
               className={` ${
                 menu?.margin && "mt-5"
               } group flex items-center text-sm  gap-3.5 font-medium p-2 hover:bg-gray-800 rounded-md`}
