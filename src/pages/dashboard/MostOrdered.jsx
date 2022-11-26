@@ -3,15 +3,15 @@ import React from 'react'
 function MostOrdered() {
     const mostOrdered = [
         {
-            name: "Spicy seasoned seafood noodles",
+            name: "Chapati ndengu ",
             count: 200,
         },
         {
-            name: "Salted pasta with mushroom sauce",
+            name: "Rice and beans ",
             count: 120,
         },
         {
-            name: "Beef dumpling in hot and sour soup",
+            name: "Beef  and ugali ",
             count: 80,
         },
     ];
